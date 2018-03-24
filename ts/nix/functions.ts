@@ -51,9 +51,17 @@ export interface Producer<T> {
  *
  * See Actor above
  * See tests for examples
- *
  */
 export interface Filter<T, U = T, V = U> {
   (t: T, u?: U, v?: V): V;
+}
+
+/*
+ * Void:
+ *
+ * A function taking no arguments and returning no value
+ */
+export interface Void {
+  (): void;
 }
 

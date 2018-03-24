@@ -267,7 +267,7 @@ const trim = __WEBPACK_IMPORTED_MODULE_0__constants_js__["d" /* UID */].trim || 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__re_js__ = __webpack_require__(11);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__constants_js__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__features_detection_js__ = __webpack_require__(30);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__features_detection_js__ = __webpack_require__(29);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__easy_dom_js__ = __webpack_require__(1);
 
 
@@ -444,40 +444,37 @@ const SVGFragment = __WEBPACK_IMPORTED_MODULE_2__features_detection_js__["d" /* 
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "c", function() { return addEventListener; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return getChecked; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "d", function() { return getValue; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return querySelector; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "e", function() { return setValue; });
+/* WEBPACK VAR INJECTION */(function(process) {Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__createStore__ = __webpack_require__(15);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__combineReducers__ = __webpack_require__(41);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__bindActionCreators__ = __webpack_require__(40);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__applyMiddleware__ = __webpack_require__(39);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__compose__ = __webpack_require__(14);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__utils_warning__ = __webpack_require__(16);
+/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "createStore", function() { return __WEBPACK_IMPORTED_MODULE_0__createStore__["a"]; });
+/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "combineReducers", function() { return __WEBPACK_IMPORTED_MODULE_1__combineReducers__["a"]; });
+/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "bindActionCreators", function() { return __WEBPACK_IMPORTED_MODULE_2__bindActionCreators__["a"]; });
+/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "applyMiddleware", function() { return __WEBPACK_IMPORTED_MODULE_3__applyMiddleware__["a"]; });
+/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "compose", function() { return __WEBPACK_IMPORTED_MODULE_4__compose__["a"]; });
+
+
+
+
+
+
+
 /*
- * Generic DOM operations. By defining them at an
- * atomic level we can be sure to only write them once, and use many times.
- *
- * NOTE: the aggressive guarding, this prevents checks from having to be repeatedly done at higher level
- * abstractions, making chaining worry free.
- *
- * NOTE: The NIX org will host a repo of atomic/orthogonal type operations like these
- * TODO switch to them when ready
- *   `import { getInputValue, setInputValue } from 'nix/atomic/dom' or something...
- *
- * "Orthogonality in programming language design is the ability to use various language features in
- * arbitrary combinations with consistent results."
- */
-// Element | null union is for chaining with querySelector
-var addEventListener = function (el, e, fn) {
-    el && e && fn && el.addEventListener(e, fn);
-};
-var getChecked = function (el) { return el && el.checked; };
-var getValue = function (el) { return el && el.value; };
-var querySelector = function (sel) { return document.querySelector(sel); };
-// note that passing a falsy second arg will clear the input.
-var setValue = function (el, val) {
-    if (val === void 0) { val = ''; }
-    if (el)
-        el.value = val;
-};
+* This is a dummy function to check if the function name has been altered by minification.
+* If the function has been minified and NODE_ENV !== 'production', warn the user.
+*/
+function isCrushed() {}
+
+if (process.env.NODE_ENV !== 'production' && typeof isCrushed.name === 'string' && isCrushed.name !== 'isCrushed') {
+  __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_5__utils_warning__["a" /* default */])('You are currently using minified code outside of NODE_ENV === \'production\'. ' + 'This means that you are running a slower development build of Redux. ' + 'You can use loose-envify (https://github.com/zertosh/loose-envify) for browserify ' + 'or DefinePlugin for webpack (http://stackoverflow.com/questions/30030031) ' + 'to ensure you have the correct code for your production build.');
+}
 
 
+/* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(20)))
 
 /***/ }),
 /* 6 */
@@ -632,7 +629,7 @@ Wire.prototype.remove = function remove() {
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__shared_poorlyfills_js__ = __webpack_require__(3);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__shared_constants_js__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__objects_Updates_js__ = __webpack_require__(29);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__objects_Updates_js__ = __webpack_require__(28);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__shared_utils_js__ = __webpack_require__(4);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__shared_re_js__ = __webpack_require__(11);
 
@@ -909,7 +906,7 @@ const selfClosing = new RegExp(
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__root_js__ = __webpack_require__(37);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__root_js__ = __webpack_require__(36);
 
 
 /** Built-in value references. */
@@ -923,9 +920,9 @@ var Symbol = __WEBPACK_IMPORTED_MODULE_0__root_js__["a" /* default */].Symbol;
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__baseGetTag_js__ = __webpack_require__(31);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__getPrototype_js__ = __webpack_require__(33);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__isObjectLike_js__ = __webpack_require__(38);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__baseGetTag_js__ = __webpack_require__(30);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__getPrototype_js__ = __webpack_require__(32);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__isObjectLike_js__ = __webpack_require__(37);
 
 
 
@@ -1293,42 +1290,6 @@ var ActionTypes = {
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* WEBPACK VAR INJECTION */(function(process) {/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__createStore__ = __webpack_require__(15);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__combineReducers__ = __webpack_require__(41);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__bindActionCreators__ = __webpack_require__(40);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__applyMiddleware__ = __webpack_require__(39);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__compose__ = __webpack_require__(14);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__utils_warning__ = __webpack_require__(17);
-/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return __WEBPACK_IMPORTED_MODULE_0__createStore__["a"]; });
-/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return __WEBPACK_IMPORTED_MODULE_1__combineReducers__["a"]; });
-/* unused harmony reexport bindActionCreators */
-/* unused harmony reexport applyMiddleware */
-/* unused harmony reexport compose */
-
-
-
-
-
-
-
-/*
-* This is a dummy function to check if the function name has been altered by minification.
-* If the function has been minified and NODE_ENV !== 'production', warn the user.
-*/
-function isCrushed() {}
-
-if (process.env.NODE_ENV !== 'production' && typeof isCrushed.name === 'string' && isCrushed.name !== 'isCrushed') {
-  __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_5__utils_warning__["a" /* default */])('You are currently using minified code outside of NODE_ENV === \'production\'. ' + 'This means that you are running a slower development build of Redux. ' + 'You can use loose-envify (https://github.com/zertosh/loose-envify) for browserify ' + 'or DefinePlugin for webpack (http://stackoverflow.com/questions/30030031) ' + 'to ensure you have the correct code for your production build.');
-}
-
-
-/* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(21)))
-
-/***/ }),
-/* 17 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
 /* harmony export (immutable) */ __webpack_exports__["a"] = warning;
 /**
  * Prints a warning in the console if it exists.
@@ -1353,11 +1314,11 @@ function warning(message) {
 }
 
 /***/ }),
-/* 18 */
+/* 17 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__store__ = __webpack_require__(19);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__store__ = __webpack_require__(18);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__constants__ = __webpack_require__(2);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return addTodo; });
 /* unused harmony export toggleTodo */
@@ -1366,10 +1327,8 @@ function warning(message) {
 
 
 var addTodo = function (text) {
-    if (text) {
-        var o = { type: __WEBPACK_IMPORTED_MODULE_1__constants__["c" /* ADD */], text: text };
-        __WEBPACK_IMPORTED_MODULE_0__store__["a" /* default */].dispatch(o);
-    }
+    var o = { type: __WEBPACK_IMPORTED_MODULE_1__constants__["c" /* ADD */], text: text };
+    __WEBPACK_IMPORTED_MODULE_0__store__["a" /* default */].dispatch(o);
 };
 var toggleTodo = function (id) {
     var o = { type: __WEBPACK_IMPORTED_MODULE_1__constants__["d" /* TOGGLE */], id: id };
@@ -1387,19 +1346,22 @@ var toggleTodos = function (completed) {
 
 
 /***/ }),
-/* 19 */
+/* 18 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_redux__ = __webpack_require__(16);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__reducers_root__ = __webpack_require__(46);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_redux__ = __webpack_require__(5);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_redux_devtools_extension__ = __webpack_require__(38);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_redux_devtools_extension___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_redux_devtools_extension__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__reducers_root__ = __webpack_require__(46);
 
 
-/* harmony default export */ __webpack_exports__["a"] = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0_redux__["a" /* createStore */])(__WEBPACK_IMPORTED_MODULE_1__reducers_root__["a" /* default */]);
+
+/* harmony default export */ __webpack_exports__["a"] = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0_redux__["createStore"])(__WEBPACK_IMPORTED_MODULE_2__reducers_root__["a" /* default */], __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1_redux_devtools_extension__["devToolsEnhancer"])({}));
 
 
 /***/ }),
-/* 20 */
+/* 19 */
 /***/ (function(module, exports) {
 
 var g;
@@ -1426,7 +1388,7 @@ module.exports = g;
 
 
 /***/ }),
-/* 21 */
+/* 20 */
 /***/ (function(module, exports) {
 
 // shim for using process in browser
@@ -1612,33 +1574,50 @@ process.umask = function() { return 0; };
 
 
 /***/ }),
-/* 22 */
+/* 21 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__atomic_dom__ = __webpack_require__(5);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__redux_dispatchers_todos__ = __webpack_require__(18);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__redux_dispatchers_todos__ = __webpack_require__(17);
 /*
  * 'ListenForAndDispatchNewTodosAndMaybeClearTheInput' is a good name but a little verbose, so 'todoAdder' it is
- *
- * 'todoAdder' is not a single thing, but a confederation of smaller 'atomic' processes.
- * We group together generic functions to form a very specific outcome:
  *
  * The header section has one input control, we need to:
  *   listen for keydown
  *   if enter, collect the value of the input and use the addTodo dispatcher
  *   clear the input
+ *
+ * In our effort to do the _least_ possible, a simple function will suffice.
  */
-
 
 var keydown = function (e) {
     if (e.code === 'Enter') {
-        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__redux_dispatchers_todos__["b" /* addTodo */])(__webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__atomic_dom__["d" /* getValue */])(e.target));
-        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__atomic_dom__["e" /* setValue */])(e.target);
+        var target = e.target, val = target.value;
+        if (val) {
+            __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__redux_dispatchers_todos__["b" /* addTodo */])(val);
+            target.value = '';
+        }
     }
 };
 /* harmony default export */ __webpack_exports__["a"] = function () {
-    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__atomic_dom__["c" /* addEventListener */])(__webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__atomic_dom__["a" /* querySelector */])('.new-todo'), 'keydown', keydown);
+    var el = document.querySelector('.new-todo');
+    el && el.addEventListener('keydown', keydown);
+};
+
+
+/***/ }),
+/* 22 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__redux_dispatchers_todos__ = __webpack_require__(17);
+
+var change = function (e) {
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__redux_dispatchers_todos__["a" /* toggleTodos */])(e.target.checked);
+};
+/* harmony default export */ __webpack_exports__["a"] = function () {
+    var el = document.querySelector('.toggle-all');
+    el && el.addEventListener('change', change);
 };
 
 
@@ -1647,26 +1626,27 @@ var keydown = function (e) {
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__atomic_dom__ = __webpack_require__(5);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__redux_dispatchers_todos__ = __webpack_require__(18);
-
-
-var change = function (e) {
-    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__redux_dispatchers_todos__["a" /* toggleTodos */])(__webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__atomic_dom__["b" /* getChecked */])(e.target));
-};
-/* harmony default export */ __webpack_exports__["a"] = function () {
-    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__atomic_dom__["c" /* addEventListener */])(__webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__atomic_dom__["a" /* querySelector */])('.toggle-all'), 'change', change);
-};
-
-
-/***/ }),
-/* 24 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__constants__ = __webpack_require__(2);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__subscriber__ = __webpack_require__(50);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__todolist__ = __webpack_require__(45);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__todoList__ = __webpack_require__(45);
+/*
+ * TodoLister
+ *
+ * Being that there is a piece of local state to hold, that being the
+ * unsubscribe function returned from the subscriber, a class or an object literal
+ * are good choices so that `this` may be referenced. In keeping with our 'do the least'
+ * philosophy, we'll use a simple nix consumer literal with an `in` method that accepts
+ * a `State` argument (this is, after all, what the subscriber will send (there is no selector)
+ *
+ * Also, we could further formalize the todoLister by extending the nix consumer composite
+ * interface to type the `.unsubscriber`
+ *
+ *    interface TodoLister extends Consumer<State> {
+ *      unsubscribe?: Void;
+ *    }
+ *
+ * We don't do that here, as this app doesn't need it, but in a larger codebase may be warranted.
+ */
 
 
 
@@ -1676,7 +1656,7 @@ var todoLister = {
             var viz_1 = state.visibility, list = viz_1 === __WEBPACK_IMPORTED_MODULE_0__constants__["a" /* VISIBILITY */].SHOW_ALL ?
                 state.todos :
                 state.todos.filter(function (t) { return t.completed === (viz_1 === __WEBPACK_IMPORTED_MODULE_0__constants__["a" /* VISIBILITY */].SHOW_ACTIVE ? false : true); });
-            __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_2__todolist__["a" /* default */])(list);
+            __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_2__todoList__["a" /* default */])(list);
         }
     },
     subscribeToStateChange: function () {
@@ -1687,7 +1667,7 @@ var todoLister = {
 
 
 /***/ }),
-/* 25 */
+/* 24 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -1798,13 +1778,13 @@ const wireContent = node => {
 
 
 /***/ }),
-/* 26 */
+/* 25 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__classes_Component_js__ = __webpack_require__(6);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__objects_Intent_js__ = __webpack_require__(9);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__hyper_wire_js__ = __webpack_require__(25);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__hyper_wire_js__ = __webpack_require__(24);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__hyper_render_js__ = __webpack_require__(8);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__shared_domdiff_js__ = __webpack_require__(10);
 /* unused harmony reexport Component */
@@ -1868,7 +1848,7 @@ function hyper(HTML) {
 
 
 /***/ }),
-/* 27 */
+/* 26 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -1929,7 +1909,7 @@ const prepend = (path, parent, node) => {
 
 
 /***/ }),
-/* 28 */
+/* 27 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -2006,15 +1986,15 @@ const toStyle = object => {
 };
 
 /***/ }),
-/* 29 */
+/* 28 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__shared_constants_js__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__classes_Component_js__ = __webpack_require__(6);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__classes_Wire_js__ = __webpack_require__(7);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__Path_js__ = __webpack_require__(27);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__Style_js__ = __webpack_require__(28);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__Path_js__ = __webpack_require__(26);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__Style_js__ = __webpack_require__(27);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__Intent_js__ = __webpack_require__(9);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__shared_domdiff_js__ = __webpack_require__(10);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__shared_easy_dom_js__ = __webpack_require__(1);
@@ -2527,7 +2507,7 @@ function observe() {
 
 
 /***/ }),
-/* 30 */
+/* 29 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -2563,13 +2543,13 @@ const hasImportNode = 'importNode' in document;
 
 
 /***/ }),
-/* 31 */
+/* 30 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__Symbol_js__ = __webpack_require__(12);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__getRawTag_js__ = __webpack_require__(34);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__objectToString_js__ = __webpack_require__(35);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__getRawTag_js__ = __webpack_require__(33);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__objectToString_js__ = __webpack_require__(34);
 
 
 
@@ -2601,7 +2581,7 @@ function baseGetTag(value) {
 
 
 /***/ }),
-/* 32 */
+/* 31 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -2610,14 +2590,14 @@ var freeGlobal = typeof global == 'object' && global && global.Object === Object
 
 /* harmony default export */ __webpack_exports__["a"] = freeGlobal;
 
-/* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(20)))
+/* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(19)))
 
 /***/ }),
-/* 33 */
+/* 32 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__overArg_js__ = __webpack_require__(36);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__overArg_js__ = __webpack_require__(35);
 
 
 /** Built-in value references. */
@@ -2627,7 +2607,7 @@ var getPrototype = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__overArg_js
 
 
 /***/ }),
-/* 34 */
+/* 33 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -2681,7 +2661,7 @@ function getRawTag(value) {
 
 
 /***/ }),
-/* 35 */
+/* 34 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -2710,7 +2690,7 @@ function objectToString(value) {
 
 
 /***/ }),
-/* 36 */
+/* 35 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -2732,11 +2712,11 @@ function overArg(func, transform) {
 
 
 /***/ }),
-/* 37 */
+/* 36 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__freeGlobal_js__ = __webpack_require__(32);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__freeGlobal_js__ = __webpack_require__(31);
 
 
 /** Detect free variable `self`. */
@@ -2749,7 +2729,7 @@ var root = __WEBPACK_IMPORTED_MODULE_0__freeGlobal_js__["a" /* default */] || fr
 
 
 /***/ }),
-/* 38 */
+/* 37 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -2785,12 +2765,39 @@ function isObjectLike(value) {
 
 
 /***/ }),
+/* 38 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var compose = __webpack_require__(5).compose;
+
+exports.__esModule = true;
+exports.composeWithDevTools = (
+  typeof window !== 'undefined' && window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ ?
+    window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ :
+    function() {
+      if (arguments.length === 0) return undefined;
+      if (typeof arguments[0] === 'object') return compose;
+      return compose.apply(null, arguments);
+    }
+);
+
+exports.devToolsEnhancer = (
+  typeof window !== 'undefined' && window.__REDUX_DEVTOOLS_EXTENSION__ ?
+    window.__REDUX_DEVTOOLS_EXTENSION__ :
+    function() { return function(noop) { return noop; } }
+);
+
+
+/***/ }),
 /* 39 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__compose__ = __webpack_require__(14);
-/* unused harmony export default */
+/* harmony export (immutable) */ __webpack_exports__["a"] = applyMiddleware;
 var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
 
@@ -2845,7 +2852,7 @@ function applyMiddleware() {
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* unused harmony export default */
+/* harmony export (immutable) */ __webpack_exports__["a"] = bindActionCreators;
 function bindActionCreator(actionCreator, dispatch) {
   return function () {
     return dispatch(actionCreator.apply(undefined, arguments));
@@ -2901,7 +2908,7 @@ function bindActionCreators(actionCreators, dispatch) {
 "use strict";
 /* WEBPACK VAR INJECTION */(function(process) {/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__createStore__ = __webpack_require__(15);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_lodash_es_isPlainObject__ = __webpack_require__(13);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__utils_warning__ = __webpack_require__(17);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__utils_warning__ = __webpack_require__(16);
 /* harmony export (immutable) */ __webpack_exports__["a"] = combineReducers;
 
 
@@ -3033,7 +3040,7 @@ function combineReducers(reducers) {
     return hasChanged ? nextState : state;
   };
 }
-/* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(21)))
+/* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(20)))
 
 /***/ }),
 /* 42 */
@@ -3076,7 +3083,7 @@ if (typeof self !== 'undefined') {
 
 var result = (0, _ponyfill2['default'])(root);
 exports['default'] = result;
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(20), __webpack_require__(52)(module)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(19), __webpack_require__(52)(module)))
 
 /***/ }),
 /* 44 */
@@ -3112,19 +3119,17 @@ function symbolObservablePonyfill(root) {
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__atomic_dom__ = __webpack_require__(5);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_hyperhtml_esm__ = __webpack_require__(26);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_hyperhtml_esm__ = __webpack_require__(25);
 var __makeTemplateObject = (this && this.__makeTemplateObject) || function (cooked, raw) {
     if (Object.defineProperty) { Object.defineProperty(cooked, "raw", { value: raw }); } else { cooked.raw = raw; }
     return cooked;
 };
 
-
 var todoList = function (list) {
-    var el = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__atomic_dom__["a" /* querySelector */])('.todo-list');
+    var el = document.querySelector('.todo-list');
     if (el) {
-        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1_hyperhtml_esm__["a" /* bind */])(el)(templateObject_1 || (templateObject_1 = __makeTemplateObject(["", ""], ["",
-            ""])), list.map(function (todo) { return __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1_hyperhtml_esm__["b" /* wire */])(todo)(templateObject_2 || (templateObject_2 = __makeTemplateObject(["\n        <li>\n          <div class='view'>\n            <input class='toggle' type='checkbox'>\n            <label for='toggle'>", "</label>\n            <button class='destroy'></button>\n          </div>\n        </li>\n      "], ["\n        <li>\n          <div class='view'>\n            <input class='toggle' type='checkbox'>\n            <label for='toggle'>", "</label>\n            <button class='destroy'></button>\n          </div>\n        </li>\n      "])), todo.text); }));
+        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0_hyperhtml_esm__["a" /* bind */])(el)(templateObject_1 || (templateObject_1 = __makeTemplateObject(["", ""], ["",
+            ""])), list.map(function (todo) { return __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0_hyperhtml_esm__["b" /* wire */])(todo)(templateObject_2 || (templateObject_2 = __makeTemplateObject(["\n        <li>\n          <div class='view'>\n            <input class='toggle' type='checkbox'>\n            <label for='toggle'>", "</label>\n            <button class='destroy'></button>\n          </div>\n        </li>\n      "], ["\n        <li>\n          <div class='view'>\n            <input class='toggle' type='checkbox'>\n            <label for='toggle'>", "</label>\n            <button class='destroy'></button>\n          </div>\n        </li>\n      "])), todo.text); }));
     }
 };
 /* harmony default export */ __webpack_exports__["a"] = todoList;
@@ -3136,7 +3141,7 @@ var templateObject_2, templateObject_1;
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_redux__ = __webpack_require__(16);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_redux__ = __webpack_require__(5);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__visibility__ = __webpack_require__(49);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__todos__ = __webpack_require__(47);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__url__ = __webpack_require__(48);
@@ -3145,7 +3150,7 @@ var templateObject_2, templateObject_1;
 
 
 // TODO it appears that upcoming versions of redux typings will make the cast to 'any' not needed...
-var root = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0_redux__["b" /* combineReducers */])({ visibility: __WEBPACK_IMPORTED_MODULE_1__visibility__["a" /* default */], todos: __WEBPACK_IMPORTED_MODULE_2__todos__["a" /* default */], parsedUrl: __WEBPACK_IMPORTED_MODULE_3__url__["a" /* default */] });
+var root = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0_redux__["combineReducers"])({ visibility: __WEBPACK_IMPORTED_MODULE_1__visibility__["a" /* default */], todos: __WEBPACK_IMPORTED_MODULE_2__todos__["a" /* default */], parsedUrl: __WEBPACK_IMPORTED_MODULE_3__url__["a" /* default */] });
 /* harmony default export */ __webpack_exports__["a"] = root;
 
 
@@ -3220,7 +3225,7 @@ var visibility = function (state, action) {
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__redux_store__ = __webpack_require__(19);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__redux_store__ = __webpack_require__(18);
 /*
  * A Nix Actor taking an 'onChange' Consumer, and an optional selection Filter.
  * These are used to subscribe to the redux store's change call, and filter the call to
@@ -3228,7 +3233,6 @@ var visibility = function (state, action) {
  * the current state is different from the last seen)
  */
 
-// TODO abstract generic classes with typed constuctors?
 var BoundHandler = /** @class */ (function () {
     function BoundHandler(onChange, select) {
         var _this = this;
@@ -3244,7 +3248,6 @@ var BoundHandler = /** @class */ (function () {
     }
     return BoundHandler;
 }());
-// function subscriber(onChange: Consumer<any>, select?: Filter<State, any>): Function {
 var subscriber = function (onChange, select) {
     var bound = new BoundHandler(onChange, select);
     var unsubscribe = __WEBPACK_IMPORTED_MODULE_0__redux_store__["a" /* default */].subscribe(bound.handler);
@@ -3335,21 +3338,9 @@ module.exports = function(module) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__components_header_todoAdder__ = __webpack_require__(22);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__components_main_completeToggler__ = __webpack_require__(23);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__components_main_todoLister__ = __webpack_require__(24);
-/*
-import store from './store'
-import app from 'dc/app'
-import { parse } from 'action-creators/url'
-
-function main() {
-  // wire pop state to redux dispatches
-  window.addEventListener('popstate', () => {
-    store.dispatch(parse(window.location.href));
-  }
-}
-*/
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__components_header_todoAdder__ = __webpack_require__(21);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__components_main_completeToggler__ = __webpack_require__(22);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__components_main_todoLister__ = __webpack_require__(23);
 
 
 

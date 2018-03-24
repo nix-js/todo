@@ -1,16 +1,16 @@
 /*
  * 'ListenForAndDispatchCompletionToggle' would be a bit long, so 'completeToggler' wins
  *
- * Like, 'todoAdder' we group together some generic functions to perform a specific task
+ * Like 'todoAdder', a function is all that is required here
  */
 import { Consumer } from '../../nix/functions'
-import { addEventListener, getChecked, querySelector } from '../atomic/dom'
 import { toggleTodos } from '../../redux/dispatchers/todos'
 
 const change: Consumer<Event> = e => {
-  toggleTodos(getChecked(<HTMLInputElement>e.target))
+  toggleTodos((<HTMLInputElement>e.target).checked)
 }
 
 export default function(): void {
-  addEventListener(querySelector('.toggle-all'), 'change', <EventListener>change)
+  const el = document.querySelector('.toggle-all')
+  el && el.addEventListener('change', <EventListener>change)
 }

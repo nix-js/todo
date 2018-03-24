@@ -1,5 +1,7 @@
 # Stupid OS Files
 *.DS_Store
+# Vim swaps
+*.swp
 # Logs
 logs
 *.log

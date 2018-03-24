@@ -8,11 +8,9 @@ import Action from '../../interfaces/actions/action'
 import { Add, Toggle, ToggleAll } from '../../interfaces/actions/todo'
 import { ADD, TOGGLE, TOGGLE_ALL, CLEAR_COMPLETED } from '../../constants'
 
-const addTodo: Consumer<string | undefined> = text => {
-  if (text) {
-    const o:Add = { type: ADD, text }
-    store.dispatch(o)
-  }
+const addTodo: Consumer<string> = text => {
+  const o:Add = { type: ADD, text }
+  store.dispatch(o)
 }
 
 const toggleTodo: Consumer<number> = id => {
