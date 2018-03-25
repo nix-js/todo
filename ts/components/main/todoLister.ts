@@ -1,8 +1,8 @@
 /*
  * TodoLister
  *
- * Being that there is a piece of local state to hold, that being the
- * unsubscribe function returned from the subscriber, a class or an object literal
+ * Here there is a piece of local state to hold, that being the
+ * unsubscribe function returned from the subscriber. A class or an object literal
  * are good choices so that `this` may be referenced. In keeping with our 'do the least'
  * philosophy, we'll use a simple nix consumer literal with an `in` method that accepts
  * a `State` argument (this is, after all, what the subscriber will send (there is no selector)
